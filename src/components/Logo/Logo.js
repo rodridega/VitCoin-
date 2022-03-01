@@ -7,6 +7,7 @@ export const Logo = () => {
       <img
         src={bitcoinLogo}
         className="w-80 hidden md:block hover:animate-spin"
+        alt="Logo"
       />
     </div>
   );
