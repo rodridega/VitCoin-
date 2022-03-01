@@ -45,7 +45,7 @@ export const Formulario = ({
             Elige tu moneda
           </option>
           <option value="USD">Dolar</option>
-          <option value="ARG">Peso Argentino</option>
+          <option value="ARS">Peso Argentino</option>
           <option value="EUR">Euro</option>
         </select>
         <hr className="m-5" />
