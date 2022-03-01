@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { Cotizacion } from "./components/Cotizacion";
+import { Formulario } from "./components/Formulario";
+import { Logo } from "./components/Logo";
+import "./index.css";
+import React, { useState } from "react";
+import { Spinner } from "./components/Spinner";
 
 function App() {
+  const [cotizacion, setCotizacion] = useState("");
+  const [moneda, setMoneda] = useState("");
+  const [cripto, setCripto] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [mensaje, setMensaje] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container mx-auto">
+        <div className="flex place-content-center pt-48 pb-16">
+          <Logo />
+          <Formulario
+            setCotizacion={setCotizacion}
+            setMoneda={setMoneda}
+            setCripto={setCripto}
+            moneda={moneda}
+            cripto={cripto}
+            setLoading={setLoading}
+            setMensaje={setMensaje}
+          />
+        </div>
+        {loading && <Spinner />}
+        {mensaje && (
+          <Cotizacion moneda={moneda} cripto={cripto} cotizacion={cotizacion} />
+        )}
+      </div>
     </div>
   );
 }
-
 export default App;
