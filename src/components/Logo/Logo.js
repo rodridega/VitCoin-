@@ -1,5 +1,5 @@
 import React from "react";
-import bitcoinLogo from "../assets/opengraph.png";
+import bitcoinLogo from './opengraph.png';
 
 export const Logo = () => {
   return (

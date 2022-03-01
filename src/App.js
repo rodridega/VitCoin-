@@ -1,6 +1,6 @@
 import { Cotizacion } from "./components/Cotizacion";
 import { Formulario } from "./components/Formulario";
-import { Logo } from "./components/Logo";
+import { Logo } from "./components/Logo/Logo";
 import "./index.css";
 import React, { useState } from "react";
 import { Spinner } from "./components/Spinner";
