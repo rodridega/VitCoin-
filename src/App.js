@@ -28,7 +28,7 @@ function App() {
           />
         </div>
         {loading && <Spinner />}
-        {mensaje && (
+        {(mensaje && moneda !== '' && cripto !== '') && (
           <Cotizacion moneda={moneda} cripto={cripto} cotizacion={cotizacion} />
         )}
       </div>
